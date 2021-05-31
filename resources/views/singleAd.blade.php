@@ -42,8 +42,11 @@
                         @csrf
                     <textarea name="msg" class="form-control" placeholder="Send message to {{$single_ad->user->name}} .. " cols="30" rows="10" ></textarea> <br>
                     <button type="submit" class="form-control btn btn-primary">Send</button> <br> <br>
-        
-                    </form>
+                     </form>
+
+                     @error('msg')
+                       <p class="bg-warning">{{$errors->first('msg')}}</p>
+                     @enderror
                     @if (session()->has('message'))
                       <div class="alert alert-success">
                         {{session()->get('message')}}

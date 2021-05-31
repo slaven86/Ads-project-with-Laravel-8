@@ -128,6 +128,12 @@ class HomeController extends Controller
     }
 
     public function replayStore(Request $request){
+
+        $request->validate([
+           
+            'msg' => 'required'
+
+        ]);
         
         $sender = User::find($request->sender_id);
         $ad = Ad::find($request->ad_id);

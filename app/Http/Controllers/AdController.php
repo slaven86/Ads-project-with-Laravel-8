@@ -44,6 +44,12 @@ class AdController extends Controller
 
     public function sendMessage(Request $request, $id){
 
+        $request->validate([
+            
+            'msg' => 'required'
+
+        ]);
+
         $ad = Ad::find($id);
         $ad_owner = $ad->user;
 

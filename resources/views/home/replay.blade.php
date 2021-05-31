@@ -25,7 +25,11 @@
               <input type="hidden" name="ad_id" value="{{$ad_id}}">
               <textarea name="msg" class="form-control" cols="30" rows="10"></textarea>
               <button type="submit" class="form-control btn btn-primary">Odgovori</button>
-          </form>
+          </form> <br>
+
+          @error('msg')
+          <p class="bg-warning">{{$errors->first('msg')}}</p>
+         @enderror
 
           @if (session()->has('message'))
           <div class="alert alert-success">
