@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg bg-light navbar-light" >
-    <a href="{{route('welcome')}}"><img src="/ad_images/internet.jpg" width="170" height="70"></a>
+    <a href="{{route('welcome')}}"><img src="/ad_images/oglasi3.png" width="190" height="70"></a>
     <ul class="navbar-nav ml-auto">
         @if (Route::has('login'))
             @auth
